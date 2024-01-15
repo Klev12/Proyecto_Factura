@@ -36,6 +36,7 @@ class SecurityConfig {
                             .requestMatchers(HttpMethod.GET,"/invoice/**")
                             .hasAnyRole("admin")
                             .anyRequest().denyAll()
+
                 }
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter::class.java)
 
